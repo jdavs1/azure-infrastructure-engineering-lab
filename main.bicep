@@ -154,3 +154,17 @@ module backup './modules/backup.bicep' = {
     webVmId: compute.outputs.webVmId
   }
 }
+
+// ============================================================
+// Resource Group Delete Lock
+// Prevents accidental deletion of the resource group and
+// resources within it while still allowing normal changes.
+// ============================================================
+
+resource resourceGroupDeleteLock 'Microsoft.Authorization/locks@2020-05-01' = {
+  name: 'lock-project1-delete'
+  properties: {
+    level: 'CanNotDelete'
+    notes: 'Prevents accidental deletion of the Project 1 resource group.'
+  }
+}
