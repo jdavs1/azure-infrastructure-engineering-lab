@@ -168,3 +168,22 @@ resource resourceGroupDeleteLock 'Microsoft.Authorization/locks@2020-05-01' = {
     notes: 'Prevents accidental deletion of the Project 1 resource group.'
   }
 }
+
+// ============================================================
+// Resource Group Tags
+// Applies organizational metadata to the Project 1 resource
+// group for identification and management.
+// ============================================================
+
+resource resourceGroupTags 'Microsoft.Resources/tags@2021-04-01' = {
+  name: 'default'
+
+  properties: {
+    tags: {
+      Environment: 'Development'
+      Project: 'Project1'
+      Workload: 'AzureEngineeringLab'
+      Owner: 'Jacob'
+    }
+  }
+}
