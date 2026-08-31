@@ -19,4 +19,4 @@ param mgmtSshPublicKey = readEnvironmentVariable('PROJECT1_MGMT_SSH_KEY')
 param alertEmail = readEnvironmentVariable('PROJECT1_ALERT_EMAIL')
 
 // Deploy with:
-// az deployment group create --name project1-deployment --resource-group rg-project1-iac-test --parameters main.dev.bicepparam
+// az deployment group create --name project1-deployment --resource-group "YOUR RESOURCE GROUP NAME" --parameters main.dev.bicepparam
