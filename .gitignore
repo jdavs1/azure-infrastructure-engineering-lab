@@ -1,0 +1,15 @@
+# Generated Bicep/ARM output
+main.json
+
+# Local test files
+testblob.txt
+
+# VS Code local settings
+.vscode/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
