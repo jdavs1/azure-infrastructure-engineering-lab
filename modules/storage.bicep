@@ -28,7 +28,7 @@ param webVmPrincipalId string
 var storageAccountName = 'stproject1${uniqueString(resourceGroup().id)}'
 var storageBlobDataReaderRoleId = '2a2b9908-6ea1-4ae2-8e65-a410df84e7d1'
 var privateEndpointName = 'pe-storage-blob-${environment}'
-var privateDnsZoneName = 'privatelink.blob.core.windows.net'
+var privateDnsZoneName = 'privatelink.blob.${az.environment().suffixes.storage}'
 var vnetName = 'vnet-project1-${environment}'
 
 

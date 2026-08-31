@@ -43,9 +43,6 @@ param alertEmail string
 // Values referenced by modules or used for consistent naming.
 // ------------------------------------------------------------
 
-var storageAccountName = 'stproject1${uniqueString(resourceGroup().id)}'
-
-var storageBlobDataReaderRoleId = '2a2b9908-6ea1-4ae2-8e65-a410df84e7d1'
 
 var webVmName = 'vm-web01-${environment}'
 
